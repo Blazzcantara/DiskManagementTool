@@ -1,4 +1,12 @@
-﻿# ... (previous content)
+# ... (previous content)
+from PyQt5.QtWidgets import (
+    QMainWindow,
+    QWidget,
+    QVBoxLayout,
+    QPushButton,
+    QLabel,
+    QFileDialog,
+)
 from src.backup.backup_module import create_backup, list_backups
 
 class MainWindow(QMainWindow):

@@ -13,7 +13,11 @@ def create_backup(source, destination):
 
 def list_backups(backup_dir):
     try:
-        backups = [d for d in os.listdir(backup_dir) if d.startswith("backup_")]
+        backups = [
+            d
+            for d in os.listdir(backup_dir)
+            if d.startswith("backup_") and os.path.isdir(os.path.join(backup_dir, d))
+        ]
         return {'status': 'success', 'backups': backups}
     except Exception as e:
         return {'status': 'error', 'message': str(e)}
