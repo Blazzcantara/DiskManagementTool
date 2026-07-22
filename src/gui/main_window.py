@@ -1,4 +1,4 @@
-﻿# ... (previous content)
+# ... (previous content)
 from src.backup.backup_module import create_backup, list_backups
 
 class MainWindow(QMainWindow):
