@@ -1,7 +1,9 @@
-﻿import unittest
+import unittest
 import tempfile
 import os
 import shutil
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.backup.backup_module import create_backup, list_backups
 
 class TestBackup(unittest.TestCase):
@@ -23,6 +25,9 @@ class TestBackup(unittest.TestCase):
         result = create_backup(self.source_dir, self.backup_dir)
         self.assertEqual(result['status'], 'success')
         self.assertTrue(os.path.exists(result['backup_path']))
+        backup_file = os.path.join(result['backup_path'], 'test_file.txt')
+        with open(backup_file, 'r') as f:
+            self.assertEqual(f.read(), 'Test content')
 
     def test_list_backups(self):
         create_backup(self.source_dir, self.backup_dir)
