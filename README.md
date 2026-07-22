@@ -1,4 +1,4 @@
-﻿# DiskManagementTool
+# DiskManagementTool
 
 A comprehensive disk management tool for analyzing, backing up, recovering, and repairing disk drives.
 
@@ -16,21 +16,22 @@ A comprehensive disk management tool for analyzing, backing up, recovering, and 
 ## Installation
 
 1. Clone this repository:
-   `
-   git clone https://github.com/Blazzcantara/DiskManagementTool.git
-   cd DiskManagementTool
-   `
+```bash
+git clone https://github.com/Blazzcantara/DiskManagementTool.git
+cd DiskManagementTool
+```
 
 2. Create a virtual environment and activate it:
-   `
-   python -m venv venv
-   source venv/bin/activate  # On Windows use env\Scripts\activate
-   `
-
-3. Install dependencies:
-   `
-   pip install -r requirements.txt
-   `
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use env\Scripts\activate
+```
+```bash
+pip install -r requirements.txt
+```
+```bash
+python src/gui/main_window.py
+```
 
 4. Run the application:
    `
