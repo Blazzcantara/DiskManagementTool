@@ -23,6 +23,10 @@ class TestBackup(unittest.TestCase):
         result = create_backup(self.source_dir, self.backup_dir)
         self.assertEqual(result['status'], 'success')
         self.assertTrue(os.path.exists(result['backup_path']))
+        # Verify that the backed up file contains the expected content
+        with open(os.path.join(result['backup_path'], "test_file.txt"), "r") as f:
+            content = f.read()
+        self.assertEqual(content, "Test content")
 
     def test_list_backups(self):
         create_backup(self.source_dir, self.backup_dir)
