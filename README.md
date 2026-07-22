@@ -1,4 +1,4 @@
-﻿# DiskManagementTool
+# DiskManagementTool
 
 A comprehensive disk management tool for analyzing, backing up, recovering, and repairing disk drives.
 

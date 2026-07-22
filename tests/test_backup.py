@@ -1,4 +1,4 @@
-﻿import unittest
+import unittest
 import tempfile
 import os
 import shutil
