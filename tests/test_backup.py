@@ -2,6 +2,8 @@
 import tempfile
 import os
 import shutil
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.backup.backup_module import create_backup, list_backups
 
 class TestBackup(unittest.TestCase):
